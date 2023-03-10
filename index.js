@@ -17,20 +17,20 @@ var Matrix = [
     [7, 8, 9],
 ];
 var reverseStr = function (str) {
-    var ArrStr = str.split("");
-    var lastArrStr = ArrStr.slice(-1);
+    var arrStr = str.split("");
+    var lastArrStr = arrStr.slice(-1);
     var revArrStr = [];
-    for (var i = ArrStr.length - 2; i >= 0; i--) {
-        revArrStr = __spreadArray(__spreadArray([], revArrStr, true), [ArrStr[i]], false);
+    for (var i = arrStr.length - 2; i >= 0; i--) {
+        revArrStr = __spreadArray(__spreadArray([], revArrStr, true), [arrStr[i]], false);
     }
-    ArrStr = __spreadArray(__spreadArray([], revArrStr, true), lastArrStr, true);
-    return ArrStr.join("");
+    arrStr = __spreadArray(__spreadArray([], revArrStr, true), lastArrStr, true);
+    return arrStr.join("");
 };
 var longest = function (sentence) {
-    var ArrStr = sentence.split(" ");
+    var arrStr = sentence.split(" ");
     var length = 0;
     var reslt;
-    ArrStr.forEach(function (e) {
+    arrStr.forEach(function (e) {
         if (e.length > length) {
             length = e.length;
             reslt = e;

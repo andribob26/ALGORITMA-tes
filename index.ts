@@ -9,22 +9,22 @@ const Matrix: number[][] = [
 ];
 
 const reverseStr = (str: string) => {
-  let ArrStr = str.split("");
-  const lastArrStr = ArrStr.slice(-1);
+  let arrStr = str.split("");
+  const lastArrStr = arrStr.slice(-1);
   let revArrStr: string[] = [];
-  for (let i: number = ArrStr.length - 2; i >= 0; i--) {
-    revArrStr = [...revArrStr, ArrStr[i]];
+  for (let i: number = arrStr.length - 2; i >= 0; i--) {
+    revArrStr = [...revArrStr, arrStr[i]];
   }
-  ArrStr = [...revArrStr, ...lastArrStr];
+  arrStr = [...revArrStr, ...lastArrStr];
 
-  return ArrStr.join("");
+  return arrStr.join("");
 };
 
 const longest = (sentence: string) => {
-  const ArrStr = sentence.split(" ");
+  const arrStr = sentence.split(" ");
   let length: number = 0;
   let reslt!: string;
-  ArrStr.forEach((e) => {
+  arrStr.forEach((e) => {
     if (e.length > length) {
       length = e.length;
       reslt = e;
